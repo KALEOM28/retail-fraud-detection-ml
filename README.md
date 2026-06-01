@@ -32,6 +32,18 @@ This project analyzes retail transaction data and detects fraudulent transaction
 6. Fraud Prediction
 7. Performance Evaluation
 8. Visualization
+   
+## Project Structure
+
+retail-fraud-detection-ml/
+│
+├── retail_fraud_detection.py
+├── retail_fraud_detection_100k.csv
+├── README.md
+├── requirements.txt
+├── fraud_percentage_pie.png
+├── payment_method_transactions_stacked_bar.png
+└── merchant_category_transactions_stacked_bar.png
 
 ## Author
 Om Ramesh Kale.
