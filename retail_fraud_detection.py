@@ -10,7 +10,7 @@ from sklearn.metrics import classification_report, accuracy_score, confusion_mat
 print("----------Retail_Fraud_Detection-----------")
 
 # Loading the dataset
- df = pd.read_csv("retail_fraud_detection_100k.csv")
+df = pd.read_csv("retail_fraud_detection_100k.csv")
 
 # Printing the first 3 rows
 print("--- FIRST 3 ROWS ---")
@@ -158,7 +158,15 @@ print("Accuracy Score:", accuracy_score(y_test, y_pred) * 100, "%")
 print("\nClassification Report:")
 print(classification_report(y_test, y_pred))
 
+cm = confusion_matrix(y_test, y_pred)
+print("\nConfusion Matrix:")
+print(cm)
 
+importance = pd.DataFrame({
+    'Feature': X.columns,
+    'Importance': model.feature_importances_
+}).sort_values(by='Importance', ascending=False)
+print(importance)
 
 #______________________________________________________________________________#
 
@@ -194,7 +202,4 @@ plt.legend(['Normal (0)', 'Fraud (1)'])
 plt.savefig('merchant_category_transactions_stacked_bar.png', bbox_inches='tight')
 print("Graph 3 (Stacked Bar) saved successfully as 'merchant_category_transactions_stacked_bar.png'!")
 plt.show()
-
-
-
 
