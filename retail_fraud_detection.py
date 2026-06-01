@@ -10,7 +10,7 @@ from sklearn.metrics import classification_report, accuracy_score, confusion_mat
 print("----------Retail_Fraud_Detection-----------")
 
 # Loading the dataset
-df = pd.read_csv("D:/OM KALE/python/frauds/retail_fraud_detection_100k.csv")
+ df = pd.read_csv("retail_fraud_detection_100k.csv")
 
 # Printing the first 3 rows
 print("--- FIRST 3 ROWS ---")
